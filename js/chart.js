@@ -35,7 +35,7 @@ document.getElementById('btn-div3').addEventListener('click', function() {
     let totalOrder = tarrotTotal + constTotal;
 
     // Construct the email body
-    let emailBody = "Tarrot Reading with " + selectedIndexTarrot + " Session" + "\n" + "Consultation" + selectedIndexConst + " Session\n The total is " + totalOrder + "PLN";
+    let emailBody = "Tarrot Reading with " + selectedIndexTarrot + " Session" + "\n" + "Consultation with " + selectedIndexConst + " Session\n The total is " + totalOrder + "PLN";
 
     // Call the sendEmail function
     sendEmail(emailBody);
