@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let totalCost = document.getElementById('total-cost');
     totalCost.textContent = "Your Total is : " + totalOrder + "PLN"
 
-    let emailBody = "Hello You have order of Tarrot reading " + selectedIndexTarrot + " Session and Consulation " + selectedIndexConst + " Session";
+    let emailBody = "Hello You have order of Tarrot reading"
 
     sendEmail(emailBody);
     
@@ -37,6 +37,4 @@ function sendEmail(){
       const content = emailBody;
 
       const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
-
-      window.location.href = mailtoLink;
     }
