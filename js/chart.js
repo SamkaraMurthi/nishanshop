@@ -1,4 +1,3 @@
-let emailBody = "";
 document.addEventListener('DOMContentLoaded', function () {
     // Retrieve values from local storage
     var selectedIndexTarrot = localStorage.getItem('tarrot-select');
@@ -23,18 +22,30 @@ document.addEventListener('DOMContentLoaded', function () {
     constTotalElement.textContent = constTotal + "PLN";
 
     let totalCost = document.getElementById('total-cost');
-    totalCost.textContent = "Your Total is : " + totalOrder + "PLN"
-
-    let emailBody = "Hello You have order of Tarrot reading"
-
-    sendEmail(emailBody);
-    
+    totalCost.textContent = "Your Total is : " + totalOrder + "PLN";
 });
 
-function sendEmail(){
-    const to = 'recipient@example.com';
-      const subject = 'Reservation Order';
-      const content = emailBody;
+// Add an event listener to the "Make a Reservation" button
+document.getElementById('btn-div').addEventListener('click', function() {
+    // Retrieve values from local storage
+    var selectedIndexTarrot = localStorage.getItem('tarrot-select');
+    var selectedIndexConst = localStorage.getItem('const-select');
 
-      const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
-    }
+    // Construct the email body
+    let emailBody = "Hello, You have ordered ";
+
+    // Call the sendEmail function
+    sendEmail(emailBody);
+});
+
+// Function to send the email
+function sendEmail(emailBody){
+    const to = 'nicomusicwriter@gmail.com';
+    const subject = 'Reservation Order';
+    const content = emailBody;
+
+    const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
+
+    // Open the email client
+    window.location.href = mailtoLink;
+}
