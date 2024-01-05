@@ -30,9 +30,12 @@ document.getElementById('btn-div3').addEventListener('click', function() {
     // Retrieve values from local storage
     var selectedIndexTarrot = localStorage.getItem('tarrot-select');
     var selectedIndexConst = localStorage.getItem('const-select');
+    var tarrotTotal = selectedIndexTarrot * 30;
+    var constTotal = selectedIndexConst * 20;
+    let totalOrder = tarrotTotal + constTotal;
 
     // Construct the email body
-    let emailBody = "Hello, You have ordered ";
+    let emailBody = "Tarrot Reading with ${selectedIndexTarrot} Session and ${selectedIndexConst} with total order is ${totalOrder} PLN";
 
     // Call the sendEmail function
     sendEmail(emailBody);
@@ -40,12 +43,13 @@ document.getElementById('btn-div3').addEventListener('click', function() {
 
 // Function to send the email
 function sendEmail(emailBody){
+    let name = document.getElementById('fullname');
+    let phone = document.getElementById('phonenumber')
+    let msg = '${name} with phone number ${phone} Ordered '
     const to = 'nicomusicwriter@gmail.com';
     const subject = 'Reservation Order';
-    const content = emailBody;
+    const content = msg + " " +emailBody;
 
     const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
-
-    // Open the email client
     window.location.href = mailtoLink;
 }

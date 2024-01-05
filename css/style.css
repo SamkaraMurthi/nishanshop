@@ -509,3 +509,51 @@ footer {
 #btn2{
   padding-left: 30px;
 }
+
+#namediv{
+  justify-content: center;
+  display: flex;
+}
+
+.fullname{
+  width: 50%;
+  padding: 0.75rem 1.3rem;
+  font-family: "Roboto", sans-serif;
+  background: var(--secondaryBackgroundColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 3px;
+  resize: none;
+}
+
+.fullname {
+  color: #000000;
+}
+
+.fullname{
+  outline: none;
+  border: 1px solid #7d7d7d;
+}
+
+/* judul 3 */
+#judul3{
+  justify-content: center;
+  display: flex;
+}
+
+#judul-biru3{
+  padding-left: 10px;
+}
+
+#judul3 h1 {
+  color: black; /* Default color for all h1 elements inside #books */
+}
+
+#judul-biru3 h1#judulwarna3 {
+  color: var(--primaryIconColor); /* Color for the "Collections" heading inside #blue-books */
+}
+
+#judul3 h1,
+#judul-biru3 h1#judulwarna2 {
+  margin: 0; /* Remove default margin */
+}
+/* judul 2 akhir */
