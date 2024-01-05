@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Add an event listener to the "Make a Reservation" button
-document.getElementById('btn-div').addEventListener('click', function() {
+document.getElementById('btn-div3').addEventListener('click', function() {
     // Retrieve values from local storage
     var selectedIndexTarrot = localStorage.getItem('tarrot-select');
     var selectedIndexConst = localStorage.getItem('const-select');
