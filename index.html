@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
     <title>Main Page</title>
 </head>
 <body>
@@ -14,12 +15,6 @@
                 <div class="logo">
                   <a href="index.html">Welcome to Nishan Spiritual Store Website</a>
                 </div>
-      
-                <nav>
-                  <ul>
-                      <a href="chart.html" target="_blank"><img src="images/chart.png" alt="Shooping Chart" style="height: 50px; width: 50px;"></a>
-                  </ul>
-                </nav>
             </div>
             </div>
           </header>
@@ -132,6 +127,7 @@
                   <div>30 PLN Per Session</div>
                   <div>Choose How Many Session</div>
                   <div><select id="tarrot-select">
+                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -172,7 +168,8 @@
                 <div class="portfolio-tags">
                   <div>20 PLN Per Session</div>
                   <div>Choose How Many Session</div>
-                  <div><select id="tarrot-select">
+                  <div><select id="const-select">
+                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -187,9 +184,7 @@
             </div>
           </div>
           <div id="btn-div" class="center-button">
-            <a href="index.html">
-              <button class="btn"><h2>Add to Cart</h2></button>
-            </a>
+              <button class="btn" onclick="Reserve()"><h2>Add to Cart</h2></button>
           </div>
         </div>
       </section>
@@ -325,5 +320,6 @@
         <p>&#169; 2023 - Nishan Mukhopadhyay </p>
       </footer>
       <!-- End Footer -->
+      <script src="js/main.js"></script>
 </body>
 </html>

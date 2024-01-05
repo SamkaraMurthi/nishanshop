@@ -208,6 +208,7 @@ nav ul li a {
     padding-left: 10%;
     padding-top: 30px;
     display: flex;
+    flex-direction: column;
 }
 
 #judul-biru{
@@ -221,6 +222,39 @@ nav ul li a {
   #judul-biru h1#judulwarna {
     color: var(--primaryIconColor); /* Color for the "Collections" heading inside #blue-books */
   }
+
+  #judul h1,
+#judul-biru h1#judulwarna {
+    margin: 0; /* Remove default margin */
+}
+
+
+
+/* judul 2 */
+#judul2{
+  padding-left: 10%;
+  padding-top: 130px;
+  display: flex;
+  flex-direction: column;
+}
+
+#judul-biru2{
+  padding-left: 10px;
+}
+
+#judul2 h1 {
+  color: black; /* Default color for all h1 elements inside #books */
+}
+
+#judul-biru2 h1#judulwarna2 {
+  color: var(--primaryIconColor); /* Color for the "Collections" heading inside #blue-books */
+}
+
+#judul2 h1,
+#judul-biru2 h1#judulwarna2 {
+  margin: 0; /* Remove default margin */
+}
+/* judul 2 akhir */
 
 
 
@@ -464,4 +498,14 @@ footer {
 
 .footer-icons a:hover svg {
   fill: #000;
+}
+
+#duatmb{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#btn2{
+  padding-left: 30px;
 }

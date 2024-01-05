@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Main Page</title>
+    <script src="js/chart.js"></script>
+    <title>Order</title>
 </head>
 <body>
-        <!--Header-->
         <header>
             <div class="main-container">
               <div class="nav">
@@ -19,11 +19,113 @@
                         </ul>
                     </div>
                   </nav>
-                <div class="logo">
-                  <a href="chart.html">Your Purchase List</a>
+                  <div class="logo">
+                    <a href="chart.html">Your Purchase List</a>
                 </div>
             </div>
             </div>
           </header>
+          <br>
+          <div id="judul2">
+            <div><h1>Your</h1></div>
+            <div id="judul-biru2"><h1 id="judulwarna2">Orders</h1></div>
+          </div>
+
+          <!-- Portfolios -->
+      <section id="portfolios">
+        <div class="portfolios main-container">
+          <div class="grid-3">
+            <!-- Portfolio 1 -->
+            <div class="portfolio">
+              <div class="portfolio-cover">
+                <img
+                  src="./images/bg2.jpeg"
+                  alt="Portfolio 1"
+                />
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-title">
+                  <h4>Tarrot Reading</h4>
+                  <!-- <a href="https://github.com/SamkaraMurthi/Flutter_Calculator" class="portfolio-link">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"
+                      />
+                    </svg>
+                  </a> -->
+                </div>
+                <div class="portfolio-tags">
+                  <div>You Order : <p id="tarrot-display"></p> Sesion</div>
+                  <div>Total Price : <p id="total-tarrot"></p></div>
+                </div>
+                <p>
+                  Read and see the future and the secret you have by the tarrot reading
+                </p>
+              </div>
+            </div>
+  
+            <!-- Portfolio 2 -->
+            <div class="portfolio">
+              <div class="portfolio-cover">
+                <img
+                  src="./images/bg.jpeg"
+                  alt="Portfolio 1"
+                />
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-title">
+                  <h4>Consultation of any Magical and Supernatural Problems</h4>
+                  <!-- <a href="https://github.com/SamkaraMurthi/Flutter_Calculator" class="portfolio-link">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"
+                      />
+                    </svg>
+                  </a> -->
+                </div>
+                <div class="portfolio-tags">
+                  <div>You Order : <p id="const-display"></p> Session</div>
+                  <div>Total Price : <p id="total-const"></p></div>
+                </div>
+                <p>
+                  Consultation with Nishan help you to know what is actually your sprititual and life problem base on your birth of date and your palm pattern
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="btn-div" class="center-button">
+            <div class="btn">
+              <div style="justify-content: center; display: flex; color: black;">Select Date</div>
+              <input type="date" id="datepick">
+            </div>
+        </div>
+          <div id="btn-div" class="center-button">
+              <button class="btn"><h2 id="total-cost"></h2></button>
+          </div>
+          <div id="duatmb">
+        <div id="duatmb">
+          <div id="btn-div" class="center-button">
+              <button class="btn" onclick="sendEmail()"><h2>Make a Reservation</h2></button>
+          </div>
+          <div id="btn2" class="center-button">
+            <a href="index.html">
+              <button class="btn"><h2>Edit Order</h2></button>
+            </a>
+          </div>
+        </div>
+        </div>
+      </section>
+      <!-- End Portfolios -->
+      <script src="js/chart.js"></script>
 </body>
 </html>
