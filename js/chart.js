@@ -35,7 +35,7 @@ document.getElementById('btn-div3').addEventListener('click', function() {
     let totalOrder = tarrotTotal + constTotal;
 
     // Construct the email body
-    let emailBody = "Tarrot Reading with ${selectedIndexTarrot} Session and ${selectedIndexConst} with total order is ${totalOrder} PLN";
+    let emailBody = "Tarrot Reading with " + selectedIndexTarrot + " Session" + "\n" + "Consultation" + selectedIndexConst + " Session\n The total is " + totalOrder + "PLN";
 
     // Call the sendEmail function
     sendEmail(emailBody);
@@ -47,10 +47,10 @@ function sendEmail(emailBody){
     let phone = document.getElementById('phonenumber').value;
     let selectedDate = document.getElementById('datepick').value;
     let dateString = String(selectedDate);
-    let msg = '${name} with phone number ${phone} Ordered ';
+    let msg = name + "\n" + phone + "\n" + "Ordered :";
     const to = 'nicomusicwriter@gmail.com';
     const subject = 'Reservation Order';
-    const content = msg + " " + emailBody;
+    const content = msg + "\n" + emailBody + "\nDate Picked : " + dateString;
 
     const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
 
