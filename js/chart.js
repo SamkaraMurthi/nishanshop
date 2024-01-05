@@ -35,9 +35,8 @@ document.getElementById('btn-div3').addEventListener('click', function() {
     let totalOrder = tarrotTotal + constTotal;
 
     // Construct the email body
-    let emailBody = "Tarrot Reading with " + selectedIndexTarrot + " Session" + "\n" + "Consultation with " + selectedIndexConst + " Session\n The total is " + totalOrder + "PLN";
+    let emailBody = "Tarrot Reading with " + selectedIndexTarrot + " Session" + "\n" + "Consultation with " + selectedIndexConst + " Session\nThe total is " + totalOrder + "PLN";
 
-    // Call the sendEmail function
     sendEmail(emailBody);
 });
 
@@ -48,10 +47,10 @@ function sendEmail(emailBody){
     let selectedDate = document.getElementById('datepick').value;
     let dateString = String(selectedDate);
     let msg = name + "\n" + phone + "\n" + "Ordered :";
-    let msgFooter = "Please Reply this Email to Confirm the Availability of the Date I have Picked\n Thank you \n" + name;
+    let msgFooter = "Please Reply this Email to Confirm the Availability of the Date I have Picked\nThank you\n" + name;
     const to = 'nicomusicwriter@gmail.com';
     const subject = 'Reservation Order';
-    const content = msg + "\n" + emailBody + "\nDate Picked : " + dateString + "\n " +  msgFooter;
+    const content = msg + "\n" + emailBody + "\nDate Picked : " + dateString + "\n" + "" + msgFooter;
 
     const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
 
