@@ -43,13 +43,25 @@ document.getElementById('btn-div3').addEventListener('click', function() {
 
 // Function to send the email
 function sendEmail(emailBody){
-    let name = document.getElementById('fullname');
-    let phone = document.getElementById('phonenumber')
-    let msg = '${name} with phone number ${phone} Ordered '
+    let name = document.getElementById('fullname').value;
+    let phone = document.getElementById('phonenumber').value;
+    let selectedDate = document.getElementById('datepick').value;
+    let dateString = String(selectedDate);
+    let msg = '${name} with phone number ${phone} Ordered ';
     const to = 'nicomusicwriter@gmail.com';
     const subject = 'Reservation Order';
-    const content = msg + " " +emailBody;
+    const content = msg + " " + emailBody;
 
     const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
-    window.location.href = mailtoLink;
+
+    if(name === ""){
+        alert("you have to fill your fullname");
+    } else if(dateString === ""){
+        alert("Please Pick a date of reservation");
+    } else if(phone === ""){
+        alert("you have to fill your phone number");
+    }
+    else{
+        window.location.href = mailtoLink;
+    }
 }
